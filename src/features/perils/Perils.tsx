@@ -1,6 +1,7 @@
 import { FluidGrid } from "../../components/FluidGrid";
 import { Peril } from "./Peril";
 import { usePerils } from "./usePerils";
+import styled from "@emotion/styled";
 
 export const Perils = () => {
   const { perils } = usePerils({
@@ -12,9 +13,13 @@ export const Perils = () => {
     <Peril {...perilProperties} />
   ));
 
+  const Heading = styled.h1`
+    text-transform: uppercase;
+  `;
+
   return (
     <section>
-      <h1>Our coverage</h1>
+      <Heading>Our coverage</Heading>
       <FluidGrid items={perilElements} />
     </section>
   );
