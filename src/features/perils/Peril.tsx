@@ -3,9 +3,7 @@ import { colorsV3 } from "@hedviginsurance/brand";
 
 export interface IPeril {
   title: string;
-  description: string;
   shortDescription: string;
-  covered: string[];
   info: string;
   icon: { variants: { light: { svgUrl: string } } };
 }
@@ -42,9 +40,13 @@ const Heading = styled.h2`
   text-align: center;
 `;
 
-export const Peril = ({ title, icon }: Pick<IPeril, "title" | "icon">) => {
+export const Peril = ({ title, icon, shortDescription, info }: IPeril) => {
   return (
-    <PerilCard>
+    <PerilCard
+      onClick={() =>
+        alert(`You clicked ${title}\n${shortDescription}\n${info}`)
+      }
+    >
       <Heading>{title}</Heading>
       <svg width="60" height="60">
         <image xlinkHref={icon.variants.light.svgUrl} width="60" height="60" />
