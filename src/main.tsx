@@ -1,11 +1,10 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import './index.css'
-import App from './App'
+import React from "react";
+import ReactDOM from "react-dom";
+import { Perils } from "./features/perils/Perils";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Perils />
   </React.StrictMode>,
-  document.getElementById('root')
-)
+  document.getElementById("root")
+);
