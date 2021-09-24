@@ -34,12 +34,6 @@ const PerilCard = styled.button`
   }
 `;
 
-const Heading = styled.h2`
-  font-size: 18px;
-  margin: 0;
-  text-align: center;
-`;
-
 export const Peril = ({ title, icon, shortDescription, info }: IPeril) => {
   return (
     <PerilCard
@@ -47,7 +41,7 @@ export const Peril = ({ title, icon, shortDescription, info }: IPeril) => {
         alert(`You clicked ${title}\n${shortDescription}\n${info}`)
       }
     >
-      <Heading>{title}</Heading>
+      {title}
       <svg width="60" height="60">
         <image xlinkHref={icon.variants.light.svgUrl} width="60" height="60" />
       </svg>
