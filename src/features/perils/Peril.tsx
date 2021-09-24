@@ -10,25 +10,34 @@ export interface IPeril {
   icon: { variants: { light: { svgUrl: string } } };
 }
 
-const Button = styled.button`
-  padding: 0;
-  border: none;
-  font: inherit;
-  color: inherit;
+const PerilCard = styled.button`
+  align-items: center;
   background-color: transparent;
-  cursor: pointer;
-  height: 160px;
-  border: 1px solid ${colorsV3.gray900};
   border-radius: 0.375rem;
+  border: 1px solid ${colorsV3.gray900};
+  color: inherit;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  font: inherit;
+  height: 160px;
+  justify-content: space-evenly;
+  padding: 8px;
+`;
+
+const Heading = styled.h2`
+  font-size: 18px;
+  margin: 0;
+  text-align: center;
 `;
 
 export const Peril = ({ title, icon }: Pick<IPeril, "title" | "icon">) => {
   return (
-    <Button>
-      {`${title}`}
-      <svg width="90" height="90">
-        <image xlinkHref={icon.variants.light.svgUrl} width="90" height="90" />
+    <PerilCard>
+      <Heading>{title}</Heading>
+      <svg width="60" height="60">
+        <image xlinkHref={icon.variants.light.svgUrl} width="60" height="60" />
       </svg>
-    </Button>
+    </PerilCard>
   );
 };
