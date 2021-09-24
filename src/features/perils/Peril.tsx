@@ -14,7 +14,7 @@ const PerilCard = styled.button`
   align-items: center;
   background-color: transparent;
   border-radius: 0.375rem;
-  border: 1px solid ${colorsV3.gray900};
+  border: 1px solid ${colorsV3.gray100};
   color: inherit;
   cursor: pointer;
   display: flex;
@@ -23,6 +23,17 @@ const PerilCard = styled.button`
   height: 160px;
   justify-content: space-evenly;
   padding: 8px;
+  transition: all 150ms ease-in-out;
+  background-color: ${colorsV3.white};
+  &:hover {
+    box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
+      0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075),
+      0 8px 8px hsl(0deg 0% 0% / 0.075);
+  }
+  &:focus {
+    border: 1px solid ${colorsV3.gray500};
+    outline: none;
+  }
 `;
 
 const Heading = styled.h2`

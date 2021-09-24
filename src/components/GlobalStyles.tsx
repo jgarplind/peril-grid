@@ -33,7 +33,6 @@ export const globalStyles = css`
   }
 
   h1 {
-    margin-top: 0;
     font-size: 5rem;
     font-weight: 400;
   }

@@ -14,6 +14,7 @@ export const Perils = () => {
   ));
 
   const Heading = styled.h1`
+    font-size: 1.25rem;
     text-align: center;
     text-transform: uppercase;
   `;
